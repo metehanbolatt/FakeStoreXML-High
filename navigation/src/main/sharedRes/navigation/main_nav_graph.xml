@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav_graph"
+    app:startDestination="@id/allProductFragment">
+
+    <fragment
+        android:id="@+id/allProductFragment"
+        android:name="com.metehanbolat.feature.home.AllProductFragment"
+        android:label="fragment_all_product"
+        tools:layout="@layout/fragment_all_product">
+        <action
+            android:id="@+id/action_allProductFragment_to_productDetailFragment"
+            app:destination="@id/productDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/productDetailFragment"
+        android:name="com.metehanbolat.feature.detail.ProductDetailFragment"
+        android:label="ProductDetailFragment"
+        tools:layout="@layout/fragment_product_detail" >
+        <argument
+            android:name="id"
+            app:argType="string" />
+    </fragment>
+</navigation>

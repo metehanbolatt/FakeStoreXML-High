@@ -1,0 +1,25 @@
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+        google()
+        mavenCentral()
+    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+rootProject.name = "FakeStoreXML"
+include ':app'
+include ':core'
+include ':core:data'
+include ':core:domain'
+include ':core:presentation'
+include ':core:common'
+include ':feature'
+include ':feature:detail'
+include ':feature:home'
+include ':navigation'
