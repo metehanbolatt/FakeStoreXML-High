@@ -36,8 +36,8 @@ class AllProductFragment : Fragment(R.layout.fragment_all_product) {
 
     private val allProductAdapter by lazy { AllProductAdapter() }
 
-//    @Inject
-//    lateinit var connectivityObserver: NetworkConnectivityLD
+    @Inject
+    lateinit var connectivityObserver: NetworkConnectivityLD
 
     private var isNetworkAvailable = false
 
@@ -88,22 +88,23 @@ class AllProductFragment : Fragment(R.layout.fragment_all_product) {
     }
 
     private fun bindUI() {
-//        connectivityObserver.observe(viewLifecycleOwner) { networkStatus ->
-//            networkStatus?.let {
-//                when (it) {
-//                    Status.Available -> {
-//                        mainViewModel.setNetworkConnectivity(networkConnectivity = true)
-//                        observeSearchTextChanges()
-//                    }
-//                    Status.Unavailable -> {
-//                        mainViewModel.setNetworkConnectivity(networkConnectivity = false)
-//                    }
-//                    Status.Lost -> {
-//                        mainViewModel.setNetworkConnectivity(networkConnectivity = false)
-//                    }
-//                }
-//            }
-//        }
+        connectivityObserver.observe(viewLifecycleOwner) { networkStatus ->
+            networkStatus?.let {
+                when (it) {
+                    Status.Available -> {
+                        mainViewModel.setNetworkConnectivity(networkConnectivity = true)
+                        observeSearchTextChanges()
+                    }
+                    Status.Unavailable -> {
+                        mainViewModel.setNetworkConnectivity(networkConnectivity = false)
+                    }
+                    Status.Lost -> {
+                        mainViewModel.setNetworkConnectivity(networkConnectivity = false)
+                    }
+                }
+            }
+        }
+
 
         binding.refreshButton.setOnClickListener {
             allProductAdapter.clearList()
