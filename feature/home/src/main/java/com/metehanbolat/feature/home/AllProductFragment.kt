@@ -137,7 +137,7 @@ class AllProductFragment : Fragment(R.layout.fragment_all_product) {
 
     private fun serviceError() {
         binding.apply {
-            networkErrorText.text = resources.getString(com.airbnb.lottie.R.string.abc_action_bar_home_description)
+            networkErrorText.text = resources.getString(R.string.service_error_text)
             networkErrorView.visible()
             loadingView.gone()
             recyclerView.gone()
@@ -148,7 +148,7 @@ class AllProductFragment : Fragment(R.layout.fragment_all_product) {
         isNetworkAvailable = isConnect
         binding.apply {
             recyclerView.isVisible = isConnect
-            networkErrorText.text = resources.getString(com.airbnb.lottie.R.string.abc_action_bar_home_description)
+            networkErrorText.text = resources.getString(R.string.no_internet_text)
             networkErrorView.isVisible = !isConnect
         }
     }

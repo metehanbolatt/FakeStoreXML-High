@@ -55,9 +55,8 @@ class AllProductViewModel @Inject constructor(
                             MainUIState.Loading
                         )
                         is NetworkResponse.Error -> _productUIDataState.postValue(
-                            MainUIState.Error(com.airbnb.lottie.R.string.abc_action_bar_home_description)
+                            MainUIState.Error(R.string.error)
                         )
-
                         is NetworkResponse.Success -> {
                             response.result.forEach {
                                 addProductsToDatabase(
@@ -90,9 +89,7 @@ class AllProductViewModel @Inject constructor(
                             MainUIState.Loading
                         )
                         is NetworkResponse.Error -> _productUIDataState.postValue(
-                            MainUIState.Error(
-                                com.airbnb.lottie.R.string.abc_action_bar_home_description
-                            )
+                            MainUIState.Error(R.string.error)
                         )
                         is NetworkResponse.Success -> _productUIDataState.postValue(
                             MainUIState.Success(

@@ -16,5 +16,7 @@ abstract class ProductMapperModule {
 
     @Binds
     @ViewModelScoped
-    abstract fun bindProductMainUIMapper(productMainUIMapperImpl: ProductMainUIMapperImpl): ProductListMapper<ProductItem, ProductUIData>
+    abstract fun bindProductMainUIMapper(
+        productMainUIMapperImpl: ProductMainUIMapperImpl
+    ): ProductListMapper<ProductItem, ProductUIData>
 }
