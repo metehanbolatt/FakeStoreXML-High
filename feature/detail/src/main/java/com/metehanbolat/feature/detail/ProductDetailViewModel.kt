@@ -7,7 +7,7 @@ import androidx.lifecycle.viewModelScope
 import com.metehanbolat.core.common.MainUIState
 import com.metehanbolat.core.domain.common.NetworkResponse
 import com.metehanbolat.core.domain.model.ProductItem
-import com.metehanbolat.core.domain.usecase.network.getproductfromid.GetProductFromIdUseCaseImpl
+import com.metehanbolat.core.domain.usecase.network.getproductfromid.GetProductFromIdUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.onCompletion
 import kotlinx.coroutines.flow.onStart
@@ -16,7 +16,7 @@ import javax.inject.Inject
 
 @HiltViewModel
 class ProductDetailViewModel @Inject constructor(
-    private val getProductFromIdUseCase: GetProductFromIdUseCaseImpl
+    private val getProductFromIdUseCase: GetProductFromIdUseCase
 ) : ViewModel() {
 
     private val _productState = MutableLiveData<MainUIState<ProductItem>>()

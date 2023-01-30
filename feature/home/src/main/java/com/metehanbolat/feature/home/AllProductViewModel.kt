@@ -6,12 +6,12 @@ import com.metehanbolat.core.domain.common.NetworkResponse
 import com.metehanbolat.core.domain.mapper.ProductListMapper
 import com.metehanbolat.core.domain.model.ProductDbModel
 import com.metehanbolat.core.domain.model.ProductItem
-import com.metehanbolat.core.domain.usecase.database.addproducttodatabaseusecase.AddProductToDatabaseUseCaseImpl
-import com.metehanbolat.core.domain.usecase.database.readallproductfromdatabaseusecase.ReadAllProductFromDatabaseUseCaseImpl
-import com.metehanbolat.core.domain.usecase.datastore.readfromdatastore.ReadServiceCallTimeFromDataStoreUseCaseImpl
-import com.metehanbolat.core.domain.usecase.datastore.savetodatastoreusecase.SaveServiceCallTimeToDataStoreUseCaseImpl
-import com.metehanbolat.core.domain.usecase.network.getallproductsusecase.GetAllProductsUseCaseImpl
-import com.metehanbolat.core.domain.usecase.network.getlimitedproductsusecase.GetLimitedProductsUseCaseImpl
+import com.metehanbolat.core.domain.usecase.database.addproducttodatabaseusecase.AddProductToDatabaseUseCase
+import com.metehanbolat.core.domain.usecase.database.readallproductfromdatabaseusecase.ReadAllProductFromDatabaseUseCase
+import com.metehanbolat.core.domain.usecase.datastore.readfromdatastore.ReadServiceCallTimeFromDataStoreUseCase
+import com.metehanbolat.core.domain.usecase.datastore.savetodatastoreusecase.SaveServiceCallTimeToDataStoreUseCase
+import com.metehanbolat.core.domain.usecase.network.getallproductsusecase.GetAllProductsUseCase
+import com.metehanbolat.core.domain.usecase.network.getlimitedproductsusecase.GetLimitedProductsUseCase
 import com.metehanbolat.core.presentation.ProductUIData
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.onCompletion
@@ -21,13 +21,13 @@ import javax.inject.Inject
 
 @HiltViewModel
 class AllProductViewModel @Inject constructor(
-    private val getAllProductsUseCase: GetAllProductsUseCaseImpl,
-    private val getLimitedProductsUseCase: GetLimitedProductsUseCaseImpl,
-    private val readAllProductFromDatabaseUseCase: ReadAllProductFromDatabaseUseCaseImpl,
-    private val addProductToDatabaseUseCase: AddProductToDatabaseUseCaseImpl,
+    private val getAllProductsUseCase: GetAllProductsUseCase,
+    private val getLimitedProductsUseCase: GetLimitedProductsUseCase,
+    private val readAllProductFromDatabaseUseCase: ReadAllProductFromDatabaseUseCase,
+    private val addProductToDatabaseUseCase: AddProductToDatabaseUseCase,
     private val productsMapper: ProductListMapper<ProductItem, ProductUIData>,
-    private val saveServiceCallTimeToDataStoreUseCase: SaveServiceCallTimeToDataStoreUseCaseImpl,
-    readServiceCallTimeToDataStoreUseCase: ReadServiceCallTimeFromDataStoreUseCaseImpl
+    private val saveServiceCallTimeToDataStoreUseCase: SaveServiceCallTimeToDataStoreUseCase,
+    readServiceCallTimeToDataStoreUseCase: ReadServiceCallTimeFromDataStoreUseCase
 ) : ViewModel() {
 
     private val _productUIDataState = MutableLiveData<MainUIState<List<ProductUIData>>>()
