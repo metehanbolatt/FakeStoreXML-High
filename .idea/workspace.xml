@@ -10,11 +10,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="91b65893-117e-423f-8595-3998df39baf2" name="Changes" comment="Error Text was completed.">
-      <change afterPath="$PROJECT_DIR$/core/presentation/src/main/res/values/strings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/data/src/test/java/com/metehanbolat/core/data/api/FakeStoreApiTest.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/data/src/test/java/com/metehanbolat/core/data/constant/TestDataConstant.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/data/src/test/java/com/metehanbolat/core/data/datasource/RemoteDataSourceImplTest.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/data/src/test/resources/FakeStoreResponse.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/data/src/test/resources/FakeStoreResponseItem.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/feature/detail/src/main/java/com/metehanbolat/feature/detail/ProductDetailViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/feature/detail/src/main/java/com/metehanbolat/feature/detail/ProductDetailViewModel.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/feature/home/src/main/java/com/metehanbolat/feature/home/AllProductViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/feature/home/src/main/java/com/metehanbolat/feature/home/AllProductViewModel.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/data/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/core/data/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/data/src/test/java/com/metehanbolat/core/data/ExampleUnitTest.kt" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,11 +30,23 @@
       <ProjectState />
     </projectState>
   </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <projects_view />
+      </state>
+    </system>
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="navigationResourceFile" />
         <option value="valueResourceFile" />
+        <option value="Kotlin File" />
+        <option value="Kotlin Class" />
       </list>
     </option>
   </component>
@@ -55,7 +70,7 @@
     "SONARLINT_PRECOMMIT_ANALYSIS": "true",
     "cidr.known.project.marker": "true",
     "ignore.preview.features.used": "true",
-    "last_opened_file_path": "C:/Users/Metehan/Desktop/FakeStoreXML-master/app/src/main/res",
+    "last_opened_file_path": "C:/Users/Metehan/Desktop/FakeStoreXML-master/core/data/src/test/resources",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.17",
     "project.structure.side.proportion": "0.2",
@@ -64,6 +79,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Metehan\Desktop\FakeStoreXML-master\core\data\src\test\resources" />
       <recent name="C:\Users\Metehan\Desktop\FakeStoreXML-master\app\src\main\res" />
       <recent name="C:\Users\Metehan\Desktop\FakeStoreXML-master\navigation\src\androidTest\res" />
     </key>
@@ -72,14 +88,14 @@
       <recent name="C:\Users\Metehan\Desktop\FakeStoreXML-master\feature\detail\src\main\res\layout" />
     </key>
     <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
+      <recent name="com.metehanbolat.core.data.repository" />
       <recent name="com.metehanbolat.core.common" />
       <recent name="com.metehanbolat.core.presentation" />
       <recent name="com.metehanbolat.navigation" />
       <recent name="com.metehanbolat.feature.home" />
-      <recent name="com.metehanbolat.fakestorexml" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Android App.app">
     <configuration name="app" type="AndroidRunConfigurationType" factoryName="Android App">
       <module name="FakeStoreXML.app.main" />
       <option name="DEPLOY" value="true" />
@@ -138,6 +154,130 @@
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
       </method>
     </configuration>
+    <configuration name="FakeStoreApiTest.request control 2" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":core:data:testDebugUnitTest" />
+            <option value="--tests" />
+            <option value="&quot;com.metehanbolat.core.data.api.FakeStoreApiTest.request control 2&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="FakeStoreApiTest.request control" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":core:data:testDebugUnitTest" />
+            <option value="--tests" />
+            <option value="&quot;com.metehanbolat.core.data.api.FakeStoreApiTest.request control&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="FakeStoreApiTest.when I requested for get all product" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":core:data:testDebugUnitTest" />
+            <option value="--tests" />
+            <option value="&quot;com.metehanbolat.core.data.api.FakeStoreApiTest.when I requested for get all product&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="RemoteDataSourceImplTest.when store item list returned is state error" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":core:data:testDebugUnitTest" />
+            <option value="--tests" />
+            <option value="&quot;com.metehanbolat.core.data.datasource.RemoteDataSourceImplTest.when store item list returned is state error&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="RemoteDataSourceImplTest.when store item list returned is state success" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":core:data:testDebugUnitTest" />
+            <option value="--tests" />
+            <option value="&quot;com.metehanbolat.core.data.datasource.RemoteDataSourceImplTest.when store item list returned is state success&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Gradle.RemoteDataSourceImplTest.when store item list returned is state success" />
+        <item itemvalue="Gradle.RemoteDataSourceImplTest.when store item list returned is state error" />
+        <item itemvalue="Gradle.FakeStoreApiTest.request control 2" />
+        <item itemvalue="Gradle.FakeStoreApiTest.request control" />
+        <item itemvalue="Gradle.FakeStoreApiTest.when I requested for get all product" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
@@ -165,7 +305,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674987015619</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Error Text was completed.">
+      <created>1675099587598</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1675099587598</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
