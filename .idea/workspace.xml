@@ -9,15 +9,9 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="91b65893-117e-423f-8595-3998df39baf2" name="Changes" comment="Error Text was completed.">
-      <change afterPath="$PROJECT_DIR$/core/data/src/test/java/com/metehanbolat/core/data/api/FakeStoreApiTest.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/data/src/test/java/com/metehanbolat/core/data/constant/TestDataConstant.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/data/src/test/java/com/metehanbolat/core/data/datasource/RemoteDataSourceImplTest.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/data/src/test/resources/FakeStoreResponse.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/data/src/test/resources/FakeStoreResponseItem.json" afterDir="false" />
+    <list default="true" id="91b65893-117e-423f-8595-3998df39baf2" name="Changes" comment="Data Layer Test was completed.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/data/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/core/data/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/data/src/test/java/com/metehanbolat/core/data/ExampleUnitTest.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,22 +55,22 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.cidr.known.project.marker": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "SONARLINT_PRECOMMIT_ANALYSIS": "true",
-    "cidr.known.project.marker": "true",
-    "ignore.preview.features.used": "true",
-    "last_opened_file_path": "C:/Users/Metehan/Desktop/FakeStoreXML-master/core/data/src/test/resources",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.17",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;SONARLINT_PRECOMMIT_ANALYSIS&quot;: &quot;true&quot;,
+    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;ignore.preview.features.used&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Metehan/Desktop/FakeStoreXML-master/core/data/src/test/resources&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.17&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Metehan\Desktop\FakeStoreXML-master\core\data\src\test\resources" />
@@ -312,7 +306,14 @@
       <option name="project" value="LOCAL" />
       <updated>1675099587598</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Data Layer Test was completed.">
+      <created>1675113558830</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1675113558830</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -332,6 +333,7 @@
     </ignored-roots>
     <MESSAGE value="Hilt problem was solved." />
     <MESSAGE value="Error Text was completed." />
-    <option name="LAST_COMMIT_MESSAGE" value="Error Text was completed." />
+    <MESSAGE value="Data Layer Test was completed." />
+    <option name="LAST_COMMIT_MESSAGE" value="Data Layer Test was completed." />
   </component>
 </project>
