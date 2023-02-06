@@ -8,6 +8,7 @@ import androidx.fragment.app.activityViewModels
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
+import com.metehanbolat.core.common.MainUIState
 import com.metehanbolat.core.common.MainViewModel
 import com.metehanbolat.core.common.NetworkConnectivityLD
 import com.metehanbolat.core.common.Status
@@ -58,26 +59,28 @@ class AllProductFragment : Fragment(R.layout.fragment_all_product) {
     }
 
     private fun bindViewModel() {
-        viewModel.productUIDataState.observe(viewLifecycleOwner) {
+        viewModel.productUIDataState.observe(viewLifecycleOwner) { mainUiStateEvent ->
             if (isNetworkAvailable) {
-                when (it) {
-                    is com.metehanbolat.core.common.MainUIState.Loading -> {
-                        contentVisible(isContentVisible = false)
-                    }
-                    is com.metehanbolat.core.common.MainUIState.Error -> {
-                        serviceError()
-                    }
-                    is com.metehanbolat.core.common.MainUIState.Success -> {
-                        contentVisible(isContentVisible = true)
-                        allProductAdapter.submitList(it.data)
-                        allProductAdapter.setOnItemClickListener { productUIData ->
-                            val action =
-                                AllProductFragmentDirections.actionAllProductFragmentToProductDetailFragment(
-                                    id = productUIData.id
-                                )
-                            findNavController().navigate(action)
+                mainUiStateEvent.getContentIfNotHandled()?.let {
+                    when (it) {
+                        is MainUIState.Loading -> {
+                            contentVisible(isContentVisible = false)
                         }
-                        binding.recyclerView.adapter = allProductAdapter
+                        is MainUIState.Error -> {
+                            serviceError()
+                        }
+                        is MainUIState.Success -> {
+                            contentVisible(isContentVisible = true)
+                            allProductAdapter.submitList(it.data)
+                            allProductAdapter.setOnItemClickListener { productUIData ->
+                                val action =
+                                    AllProductFragmentDirections.actionAllProductFragmentToProductDetailFragment(
+                                        id = productUIData.id
+                                    )
+                                findNavController().navigate(action)
+                            }
+                            binding.recyclerView.adapter = allProductAdapter
+                        }
                     }
                 }
             }
@@ -104,7 +107,6 @@ class AllProductFragment : Fragment(R.layout.fragment_all_product) {
                 }
             }
         }
-
 
         binding.refreshButton.setOnClickListener {
             allProductAdapter.clearList()

@@ -1,6 +1,7 @@
 package com.metehanbolat.feature.home
 
 import androidx.lifecycle.*
+import com.metehanbolat.core.common.Event
 import com.metehanbolat.core.common.MainUIState
 import com.metehanbolat.core.domain.common.NetworkResponse
 import com.metehanbolat.core.domain.mapper.ProductListMapper
@@ -30,8 +31,8 @@ class AllProductViewModel @Inject constructor(
     readServiceCallTimeToDataStoreUseCase: ReadServiceCallTimeFromDataStoreUseCase
 ) : ViewModel() {
 
-    private val _productUIDataState = MutableLiveData<MainUIState<List<ProductUIData>>>()
-    val productUIDataState: LiveData<MainUIState<List<ProductUIData>>> get() = _productUIDataState
+    private val _productUIDataState = MutableLiveData<Event<MainUIState<List<ProductUIData>>>>()
+    val productUIDataState: LiveData<Event<MainUIState<List<ProductUIData>>>> get() = _productUIDataState
 
     private val _productListFromDatabase = MutableLiveData<List<ProductDbModel>>()
     val productListFromDatabase: LiveData<List<ProductDbModel>> get() = _productListFromDatabase
@@ -52,10 +53,10 @@ class AllProductViewModel @Inject constructor(
                 .collect { response ->
                     when (response) {
                         NetworkResponse.Loading -> _productUIDataState.postValue(
-                            MainUIState.Loading
+                            Event(MainUIState.Loading)
                         )
                         is NetworkResponse.Error -> _productUIDataState.postValue(
-                            MainUIState.Error(R.string.error)
+                            Event(MainUIState.Error(R.string.error))
                         )
                         is NetworkResponse.Success -> {
                             response.result.forEach {
@@ -68,9 +69,7 @@ class AllProductViewModel @Inject constructor(
                                 )
                             }
                             _productUIDataState.postValue(
-                                MainUIState.Success(
-                                    productsMapper.map(response.result)
-                                )
+                                Event(MainUIState.Success(productsMapper.map(response.result)))
                             )
                         }
                     }
@@ -86,15 +85,13 @@ class AllProductViewModel @Inject constructor(
                 .collect { response ->
                     when (response) {
                         NetworkResponse.Loading -> _productUIDataState.postValue(
-                            MainUIState.Loading
+                            Event(MainUIState.Loading)
                         )
                         is NetworkResponse.Error -> _productUIDataState.postValue(
-                            MainUIState.Error(R.string.error)
+                            Event(MainUIState.Error(R.string.error))
                         )
                         is NetworkResponse.Success -> _productUIDataState.postValue(
-                            MainUIState.Success(
-                                productsMapper.map(response.result)
-                            )
+                            Event(MainUIState.Success(productsMapper.map(response.result)))
                         )
                     }
                 }
