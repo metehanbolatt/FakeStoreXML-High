@@ -9,9 +9,8 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="91b65893-117e-423f-8595-3998df39baf2" name="Changes" comment="Data Layer Test was completed.">
+    <list default="true" id="91b65893-117e-423f-8595-3998df39baf2" name="Changes" comment="* Event">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,8 +38,8 @@
       <list>
         <option value="navigationResourceFile" />
         <option value="valueResourceFile" />
-        <option value="Kotlin File" />
         <option value="Kotlin Class" />
+        <option value="Kotlin File" />
       </list>
     </option>
   </component>
@@ -313,7 +312,28 @@
       <option name="project" value="LOCAL" />
       <updated>1675113558830</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="*Gradle update">
+      <created>1675626332921</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1675626332921</updated>
+    </task>
+    <task id="LOCAL-00006" summary="* Gradle update">
+      <created>1675712386983</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1675712386983</updated>
+    </task>
+    <task id="LOCAL-00007" summary="* Event">
+      <created>1675712406584</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1675712406584</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -334,6 +354,9 @@
     <MESSAGE value="Hilt problem was solved." />
     <MESSAGE value="Error Text was completed." />
     <MESSAGE value="Data Layer Test was completed." />
-    <option name="LAST_COMMIT_MESSAGE" value="Data Layer Test was completed." />
+    <MESSAGE value="*Gradle update" />
+    <MESSAGE value="* Gradle update" />
+    <MESSAGE value="* Event" />
+    <option name="LAST_COMMIT_MESSAGE" value="* Event" />
   </component>
 </project>
